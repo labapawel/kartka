@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AiService {
-  client = new HfInference("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")
+  client = new HfInference("token z huggingface");
   constructor() { }
 
   private _obs: BehaviorSubject<string> = new BehaviorSubject<string>("");
