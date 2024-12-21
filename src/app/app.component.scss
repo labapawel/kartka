@@ -1,0 +1,44 @@
+.kartka {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #2ba6e4, #1c4fb6);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding: 20px;
+}
+
+.snieg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    left:0;
+    top:0;
+    & > * {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        animation: snieg 5s linear infinite;
+    }
+    & > *::before {
+        content: '*';
+    }
+}
+
+@keyframes snieg {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+    
